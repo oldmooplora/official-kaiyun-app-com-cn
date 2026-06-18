@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>开云 · 资料索引笔记</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+      background: #f5f3f0;
+      color: #1e1e1a;
+      line-height: 1.75;
+      letter-spacing: 0.02em;
+    }
+
+    /* 深色头图区 */
+    .hero {
+      background: #1e2a25;
+      background-image: radial-gradient(circle at 20% 30%, #2d3f36, #0d1814);
+      padding: 4rem 1.5rem 3.2rem;
+      text-align: center;
+      color: #eae6df;
+    }
+
+    .hero h1 {
+      font-size: 2.4rem;
+      font-weight: 430;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.8rem;
+      color: #d9d2c5;
+    }
+
+    .hero .sub {
+      font-size: 1.05rem;
+      font-weight: 300;
+      color: #b3ab9e;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .hero .badge {
+      display: inline-block;
+      margin-top: 1.8rem;
+      padding: 0.4rem 1.2rem;
+      border: 1px solid #5f6f61;
+      border-radius: 40px;
+      font-size: 0.8rem;
+      color: #bcb5a8;
+      letter-spacing: 0.08em;
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    /* 正文容器 — 浅色底，宽而不挤 */
+    .content {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 3.2rem 1.8rem 4.5rem;
+      background: #fcfaf7;
+    }
+
+    .content p {
+      margin-bottom: 1.35rem;
+      font-size: 1rem;
+      color: #2f2d29;
+    }
+
+    .content .intro-para {
+      font-size: 1.08rem;
+      border-left: 3px solid #7f8b7a;
+      padding-left: 1.2rem;
+      margin: 2rem 0 1.8rem;
+      color: #3d3b35;
+      font-style: normal;
+    }
+
+    /* 引用提示块 */
+    .callout {
+      background: #edebe6;
+      border-radius: 12px;
+      padding: 1.4rem 1.6rem;
+      margin: 2rem 0;
+      border-left: 5px solid #5b6e5b;
+      font-size: 0.95rem;
+      color: #2b2a25;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+
+    .callout strong {
+      color: #3e543e;
+      font-weight: 530;
+    }
+
+    /* 链接强调色 */
+    a {
+      color: #2f6b4a;
+      text-decoration: none;
+      border-bottom: 1px solid #b2cfb8;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    a:hover {
+      color: #1f4f34;
+      border-bottom-color: #2f6b4a;
+    }
+
+    /* 小标题 (不用h2/h3 保持简洁感) */
+    .section-label {
+      font-weight: 450;
+      font-size: 1.1rem;
+      margin: 2.4rem 0 0.8rem;
+      color: #35332e;
+      letter-spacing: 0.04em;
+      border-bottom: 1px solid #dad6ce;
+      padding-bottom: 0.25rem;
+      display: inline-block;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 1rem 0 1.8rem;
+    }
+
+    li {
+      margin-bottom: 0.6rem;
+      padding-left: 1.2rem;
+      position: relative;
+      color: #3a3732;
+    }
+
+    li::before {
+      content: "·";
+      position: absolute;
+      left: 0;
+      color: #7f8a78;
+      font-weight: bold;
+    }
+
+    /* FAQ 摘要 — 紧凑列表 */
+    .faq-item {
+      margin: 1rem 0 1.5rem;
+    }
+
+    .faq-q {
+      font-weight: 500;
+      color: #2a3f2a;
+      margin-bottom: 0.25rem;
+    }
+
+    .faq-a {
+      color: #44423c;
+      font-size: 0.96rem;
+      padding-left: 0.8rem;
+      border-left: 2px solid #d1cdc3;
+    }
+
+    /* 响应式 */
+    @media (max-width: 640px) {
+      .hero h1 {
+        font-size: 1.9rem;
+      }
+      .hero {
+        padding: 3rem 1rem 2.4rem;
+      }
+      .content {
+        padding: 2.2rem 1.2rem 3.5rem;
+      }
+      .callout {
+        padding: 1rem 1.2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 1.7rem;
+      }
+      .hero .sub {
+        font-size: 0.95rem;
+      }
+    }
+
+    /* 访问句 footer 风格 */
+    .visit-line {
+      margin-top: 2.8rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid #dbd7cf;
+      font-size: 0.95rem;
+      color: #4d4a42;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 深色头图区 -->
+  <div class="hero">
+    <h1>开云 · 资料整理日志</h1>
+    <p class="sub">从信息碎片到结构索引，一条温和的整理路径</p>
+    <span class="badge">笔记 · 索引 · 观察</span>
+  </div>
+
+  <!-- 正文：浅色底，博客式段落 -->
+  <div class="content">
+
+    <!-- 导语 -->
+    <p class="intro-para">
+      在大量信息流中保持条理并不容易。过去几个月，我围绕“<a href="https://www.official-kaiyun-app.com.cn">开云</a>”这个关键词做了一些资料收集与归类，逐渐形成一套轻量的索引框架。下面是对这一过程的简要梳理，也算是一份可复用的笔记思路。
+    </p>
+
+    <!-- 正文第一段：从整理角度切入 -->
+    <p>
+      最开始只是随手保存一些截图和链接，但数量多了之后反而更难回溯。后来我改用主题卡片的方式——每个卡片对应一个子方向，比如功能说明、常见疑问、版本变迁等。把所有与“开云”相关的内容打散再重组，按照信息类型而不是时间顺序排列，检索效率提高不少。
+    </p>
+
+    <!-- 第二段：索引细节 -->
+    <p>
+      索引的乐趣在于发现结构。同一个词在不同的上下文里会衍生出不同的侧面。比如在帮助文档里，“开云”常指向配置流程与权限说明；而在用户讨论中，更多是使用体验与场景适配。将这两类信息并列放置，反而能拼出一幅更完整的图景。我把这种对照关系整理成一个简单的二维表：横轴是信息来源（官方 vs 社区），纵轴是内容层次（入门 · 操作 · 问题）。
+    </p>
+
+    <!-- 引用提示块 -->
+    <div class="callout">
+      <strong>📌 整理提示</strong><br>
+      当一条信息同时出现在三个以上独立来源中，建议将它标记为“高置信度条目”，单独归入索引核心区。与“开云”相关的多条操作指引都符合这个特征，值得优先保留。
+    </div>
+
+    <!-- 第三段：具体场景例子 -->
+    <p>
+      举个具体的例子。在整理过程中我发现，关于“多设备同步”的描述，官方说明和用户经验帖在步骤上几乎完全一致，只是表述详略不同。于是我把两者合并为一条完整指南，并注明差异点。这种合并不仅节省了反复比对的时间，也让我后来向朋友解释时更有底气——因为手头已经有经过交叉验证的资料。
+    </p>
+
+    <!-- 小标题 + 特点列表（非广告式，只陈述整理特征） -->
+    <div class="section-label">索引结构中的三个常用维度</div>
+    <ul>
+      <li><strong>来源层：</strong>官方更新、社区讨论、第三方评测 —— 三列并行，以便对照信息浓度。</li>
+      <li><strong>时间锚：</strong>每一条内容都记录捕获日期，避免过时信息干扰判断。</li>
+      <li><strong>关联度：</strong>与“开云”核心功能直接相关的标记为 A 级，间接相关的标记为 B 级，外围信息归入附录。</li>
+    </ul>
+
+    <!-- FAQ 摘要（非营销，仅事实问答） -->
+    <div class="section-label">FAQ 摘要 · 来自索引整理</div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q：整理中遇到最多的疑问是什么？</div>
+      <div class="faq-a">主要集中在“不同资料对同一功能的描述略有出入”如何处理。我的做法是保留所有版本并标注出处，不做主观合并，供后续自行判断。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q：索引对新手友好吗？</div>
+      <div class="faq-a">是的。在索引开头我放了一个“快速路径”小节，只包含经过交叉验证的 3–5 条核心资料，读完即可建立基本认知。之后再按需深入。</div>
+    </div>
+
+    <!-- 访问句：自然引用链接，无诱导词汇 -->
+    <div class="visit-line">
+      如果你也在整理与“<a href="https://www.official-kaiyun-app.com.cn">开云</a>”相关的信息，或许可以从我归档的几篇基础说明开始——它们经过多轮比对，内容相对稳定。当然，每个人的索引习惯不同，关键还是找到自己舒适的节奏。
+    </div>
+
+    <!-- 最后一段，温和收尾 -->
+    <p style="margin-top: 2rem; color: #5d5952; font-size: 0.94rem;">
+      以上内容来自日常整理记录，无广告性质，仅供思路参考。所提及的信息均以公开资料为准，如有更新请以原始出处为准。
+    </p>
+
+  </div>
+
+</body>
+</html>
